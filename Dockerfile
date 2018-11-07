@@ -7,14 +7,15 @@ RUN apt-get update \
     bzip2 \
     git \
     wget \
-    sudo
+    sudo \
+    vim
 
 # install miniconda and bioconda
 RUN wget --no-check-certificate -O /tmp/miniconda-install.sh \
   https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh \
   && chmod 777 /tmp/miniconda-install.sh \
   && sh /tmp/miniconda-install.sh -b \
-  && conda update conda \
+  && /root/miniconda3/bin/conda update conda \
   && echo 'export PATH="${PATH}:/root/miniconda3/bin"' >> ~/.bashrc \
   && /root/miniconda3/bin/conda config --add channels defaults \
   && /root/miniconda3/bin/conda config --add channels bioconda \
