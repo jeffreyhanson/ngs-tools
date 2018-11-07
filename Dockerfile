@@ -13,21 +13,21 @@ RUN apt-get update --fix-missing \
     vim \
     less
 
-# install miniconda and bioconda
+# install and initialize miniconda
 RUN wget --no-check-certificate -O /tmp/miniconda-install.sh \
   https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh \
   && chmod 777 /tmp/miniconda-install.sh \
-  && sh /tmp/miniconda-install.sh -b \
-  && /root/miniconda3/bin/conda update conda \
-  && /root/miniconda3/bin/conda config --add channels defaults \
-  && /root/miniconda3/bin/conda config --add channels bioconda \
-  && /root/miniconda3/bin/conda config --add channels conda-forge \
-  && echo ". /root/miniconda3/etc/profile.d/conda.sh\n" >> ~/.bashrc \
-  && echo "conda activate base" >> ~/.bashrc \
-  && rm tmp/miniconda-install.sh
+  && sh /tmp/miniconda-install.sh -b -p /opt/conda \
+  && rm /tmp/miniconda-install.sh \
+  && /opt/conda/bin/conda update conda \
+  && /opt/conda/bin/conda config --add channels defaults \
+  && /opt/conda/bin/conda config --add channels bioconda \
+  && /opt/conda/bin/conda config --add channels conda-forge \
+  && echo ". /opt/conda/etc/profile.d/conda.sh\n" >> ~/.bashrc \
+  && echo "conda activate base\n" >> ~/.bashrc
 
 # install bioconda software
-RUN /root/miniconda3/bin/conda install -y -c bioconda \
+RUN /opt/conda/bin/conda install -y -c bioconda \
   perl-velvetoptimiser=2.2.5 \
   velvet=1.2.10 \
   fastp=2.2.5 \
