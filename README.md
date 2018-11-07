@@ -1,5 +1,5 @@
 [![Docker Build Status](https://img.shields.io/docker/build/jeffreyhanson/ngs-tools.svg)](https://hub.docker.com/r/jeffreyhanson/ngs-tools/)
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-brightgreen.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/license-GPL%20v3-brightgreen.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # Tools for Next Generation Sequencing data
 
