@@ -20,8 +20,8 @@ RUN wget --no-check-certificate -O /tmp/miniconda-install.sh \
   && /root/miniconda3/bin/conda config --add channels defaults \
   && /root/miniconda3/bin/conda config --add channels bioconda \
   && /root/miniconda3/bin/conda config --add channels conda-forge \
-  && /root/miniconda3/bin/conda activate \
-  && echo ". /root/miniconda3/etc/profile.d/conda.sh" >> ~/.bashrc
+  && echo ". /root/miniconda3/etc/profile.d/conda.sh" >> ~/.bashrc \
+  && /root/miniconda3/bin/conda activate
 
 # install bioconda software
 RUN /root/miniconda3/bin/conda install -y -c bioconda \
