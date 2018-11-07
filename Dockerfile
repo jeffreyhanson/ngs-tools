@@ -30,7 +30,7 @@ RUN wget --no-check-certificate -O /tmp/miniconda-install.sh \
 RUN /opt/conda/bin/conda install -y -c bioconda \
   perl-velvetoptimiser=2.2.5 \
   velvet=1.2.10 \
-  fastp=2.2.5 \
+  fastp=0.19.4 \
   fastqc=0.11.8
 
 # set default command
