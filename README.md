@@ -5,7 +5,7 @@
 
 ### Overview
 
-This repository contains instructions for building a [Docker container](https://www.docker.com/) that contains some tools for processing Next Generation Sequencing data.
+This repository contains instructions for building a [Docker container](https://www.docker.com/) with some tools for processing Next Generation Sequencing data.
 
 ## Usage
 
