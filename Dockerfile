@@ -25,7 +25,7 @@ RUN wget --no-check-certificate -O /tmp/miniconda-install.sh \
 
 # install bioconda software
 RUN /root/miniconda3/bin/conda install -y -c bioconda \
-  && perl-velvetoptimiser=2.2.5 \
-  && velvet=1.2.10 \
-  && fastp=2.2.5 \
-  && fastqc=0.11.8
+  perl-velvetoptimiser=2.2.5 \
+  velvet=1.2.10 \
+  fastp=2.2.5 \
+  fastqc=0.11.8
