@@ -3,7 +3,7 @@
 
 # Tools for Next Generation Sequencing data
 
-### Overview
+## Overview
 
 This repository contains instructions for building a [Docker container](https://www.docker.com/) with some tools for processing Next Generation Sequencing data.
 
@@ -13,7 +13,7 @@ To download the image, execute the following command in the terminal:
 
     docker pull "jeffreyhanson/ngs-tools:latest"
 
-### Software
+## Software
 
 | **Name** | **Version** | **Description**
 | :----------: | :---------: | :----------: |
